@@ -3,11 +3,9 @@ package com.andyadc.marketing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@MapperScan(basePackages = {"com.andyadc.marketing.persistence.mapper"})
 @SpringBootApplication
-public class Application {
-
+public class MarketingApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(MarketingApplication.class, args);
     }
 }
