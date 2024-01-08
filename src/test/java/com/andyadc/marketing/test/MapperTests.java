@@ -17,4 +17,12 @@ public class MapperTests {
         Award award = awardMapper.selectByPrimaryKey(1L);
         System.out.println(award.getAwardKey());
     }
+
+    @Test
+    public void test_AwardMapper_selectByAwardId() {
+        Award award = awardMapper.selectByAwardId(1);
+        System.out.println(award.getAwardKey());
+        System.out.println(award.getAwardDesc());
+    }
+
 }
