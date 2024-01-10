@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 @Entity
 public class Award implements Serializable {
 
+    private static final long serialVersionUID = -795765066427670323L;
+
     // 自增主键
     private Long id;
     /**
