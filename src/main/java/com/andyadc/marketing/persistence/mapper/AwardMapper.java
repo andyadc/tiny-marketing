@@ -2,6 +2,9 @@ package com.andyadc.marketing.persistence.mapper;
 
 import com.andyadc.marketing.persistence.entity.Award;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface AwardMapper {
@@ -17,4 +20,10 @@ public interface AwardMapper {
     int updateByPrimaryKeySelective(Award row);
 
     int updateByPrimaryKey(Award row);
+
+    @Results(value = {
+            @Result(property = "awardDesc", column = "award_desc")
+    })
+    @Select(value = "SELECT * FROM award WHERE award_id = #{awardId}")
+    Award selectByAwardId(Integer awardId);
 }
